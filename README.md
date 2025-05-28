@@ -1,7 +1,8 @@
-# DropCheck for Linux
+# shownet-dropcheck-tool
 
 Mac向けのオリジナルのDropCheckスクリプトが期待通りに動作しなかったため、Linux環境向けに再実装および機能拡張を行ったものです。
 ネットワークの基本的な接続性診断を自動化し、その結果をログに記録します。
+Interop ShowNetのようなイベントでの利用を想定して開発しています。
 
 ## ファイル構成 (主要スクリプト)
 
@@ -76,3 +77,5 @@ $ sudo ./Launch-Dropcheck.sh -o dropcheck_results.log -i eth0 -c dropcheck.conf
 - `Initial-Setup.sh` は `nmcli` を使用してインターフェースの再起動を試みるため、NetworkManagerが管理している環境での実行を想定しています。また、DNSキャッシュクリアのロジックも特定のサービスに依存しています。
 - `Traceroute-test.sh`, `MTR-test.sh`, `test-mtr.sh` および `Initial-Setup.sh` の一部機能は `sudo` 権限を必要とします。
 - `hostlist.txt` は、`test-mtr.sh` や `Trace-DNS.sh` のようなスタンドアロンの補助スクリプトで使用されることを想定した、IPアドレスとホスト名の対応リストのサンプルです。`Launch-Dropcheck.sh` から実行される主要な診断フローでは直接使用されません。
+
+---
