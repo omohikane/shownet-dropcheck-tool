@@ -1,0 +1,22 @@
+# Log files
+*.log
+dropcheck_results.log
+
+# OS generated files
+.DS_Store
+Thumbs.db
+*.swp
+*~
+
+# Editor directories and files
+.vscode/
+.idea/
+
+# Configuration files that might contain sensitive local data (if you provide a .example)
+# dropcheck.conf # Uncomment if you want users to create their own from an example and not commit the local one
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
